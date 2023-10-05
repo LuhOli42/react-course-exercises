@@ -1,8 +1,8 @@
 import componentsImage from "./assets/images/components.png";
 import stateImage from "./assets/images/state.png";
 import eventsImage from "./assets/images/events.png";
-import Header from "./components/Header";
-import Concepts from "./components/Concepts.js";
+import Header from "./components/Header/Header";
+import Concepts from "./components/Concepts/Concepts";
 
 const concepts = [
   {
@@ -29,7 +29,14 @@ function App() {
   return (
     <div>
       <Header />
-      <Concepts itens={concepts} />
+      <div>
+        {" "}
+        <ul id="concepts">
+          <Concepts itens={concepts[0]} />
+          <Concepts itens={concepts[1]} />
+          <Concepts itens={concepts[2]} />
+        </ul>
+      </div>
     </div>
   );
 }
